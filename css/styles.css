@@ -302,6 +302,7 @@ img {
 	margin-bottom: 10px;
 
 	font-weight: 700;
+	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
 	color: var(--title-text-color);
@@ -330,9 +331,8 @@ img {
 	height: 70px;
 
 	font-weight: 700;
-	font-size: 14px;
+	line-height: 1.14;
 	text-align: center;
-	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--text-white-color);
 
@@ -454,6 +454,7 @@ img {
 .footer-content {
 	display: flex;
 	align-items: baseline;
+	/* justify-content: space-between; */
 }
 
 .footer .logo {
@@ -479,12 +480,17 @@ img {
 
 .address {
 	margin-top: 20px;
+	width: 231px;
 }
 /* .address .item:first-child {
 	margin-top: 20px;
 } */
 .address .item:last-child {
 	margin-bottom: 0px;
+}
+
+.footer-social {
+	margin-left: 70px;
 }
 
 .social-title {
@@ -495,10 +501,6 @@ img {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--white-color);
-}
-
-.footer-social {
-	margin-left: 70px;
 }
 
 .social-list {
@@ -534,6 +536,7 @@ img {
 	margin-right: 10px;
 }
 
+/* ---------------------------------------MODAL BACKDROP------------------------------------------- */
 .backdrop {
 	position: fixed;
 	left: 0px;
@@ -544,12 +547,10 @@ img {
 	background: rgba(0, 0, 0, 0.2);
 
 	opacity: 1;
-	transition: opasiti 250ms var(--transition-time);
+	transition: opacity 250ms var(--transition-time);
 }
 
-/* ---------------------------------------MODAL BACKDROP------------------------------------------- */
 .backdrop.is-hidden {
-	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
 }
@@ -705,6 +706,7 @@ img {
 	transition: transform 250ms var(--transition-time);
 }
 
-.portfolio-item:hover .portfolio-thumb-text {
+.portfolio-link:hover .portfolio-thumb-text,
+.portfolio-link:focus .portfolio-thumb-text {
 	transform: translateY(0);
 }
